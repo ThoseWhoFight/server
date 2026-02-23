@@ -9,7 +9,7 @@ local ID = zones[xi.zone.RIVERNE_SITE_A01]
 local entity = {}
 
 local function disturbMob(mob)
-    local offset = mob:getID() - ID.mob.HELIODROMOS_OFFSET - 3
+    local offset = mob:getID() - (ID.mob.HELIODROMOS_OFFSET - 3)
     if offset >= 0 and offset <= 2 then
         SetServerVariable('Heliodromos_ToD', GetSystemTime() + math.random(43200, 54000)) -- 12 to 15 hours
     end
